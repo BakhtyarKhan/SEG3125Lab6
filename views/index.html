@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Survey </title>
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <!-- form classes inspired by: https://getbootstrap.com/docs/4.1/components/forms/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+</head>
+<body style="background-color: honeydew;">
+<div class="container-fluid w-75">
+	<p class="display-2 text-center">
+		<b>UI Evaluation Survey</b> <br>
+	</p>
+	<p class="text-primary text-center" style="font-size: 30px">
+		<a href="https://www.premierleague.com/stats" rel="noopener noreferrer" target="_blank" class="website-link">Click here to visit the Premier League Website</a>
+	</p>
+	<a target="_blank" href="https://www.premierleague.com/stats" rel="noopener noreferrer"><img src="/images/premier_league_logo.png" title="Premier League Website"></a>
+	<hr/>
+	<form name="PremierLeague Form">
+		<div class="form-group">
+			<h3>Personal Info</h3>
+			<input type="text" class="form-control" placeholder="Full Name" name="name" required><br>
+			<input type="text" class="form-control" placeholder="Email" name="email" required><br>
+			<input type="number" class="form-control" placeholder="Age" min="1" name="age" required><br>
+		</div>
+		<div class="form-group">
+			<h3>Are the player stats well placed?</h3>
+			<input type="radio" name="stats" id="q1Yes" value="Yes" required>
+			<label class="form-check-label" for="q1Yes">Yes</label>
+			<br>
+			<input type="radio" name="stats" id="q1No" value="No" required>
+			<label class="form-check-label" for="q1No">No</label>
+			<br>
+        </div>
+        <br>
+		<div class="form-group">
+			<h3>On the left navigation bar, what is your favourite tab?</h3>
+			<select name="favouriteTab" class="form-control" id="q2" required>
+            <option value ="dashboard" selected="selected">Dashboard</option>
+            <option value ="player stats" selected="selected">Player Stats</option>
+            <option value ="club stats" selected="selected">Club Stats</option>
+            <option value ="alltime stats" selected="selected">All-time Stats</option>
+            <option value ="records" selected="selected">Records</option>
+            <option value ="headtohead" selected="selected">Head-to-Head</option>
+            <option value ="playercomparison" selected="selected">Player Comparison</option>
+			<option value ="awards" selected="selected">Awards</option>
+			</select>
+		</div>
+        <br>
+		<div class="form-group">
+			<h3>Which of the stats are important to you? (Select all that apply)</h3>
+			<input type="checkbox" name="statSelected" id="playergoals" value="Player Goals">
+			<label class="form-check-label" for="playergoals">Player: Goals</label><br>
+			<input type="checkbox" name="statSelected" id="playerassists" value="Player Assists">
+			<label class="form-check-label" for="playerassists">Player: Assists</label><br>
+			<input type="checkbox" name="statSelected" id="playerpasses" value="Player Passes">
+			<label class="form-check-label" for="playerpasses">Player: Passes</label><br>
+			<input type="checkbox" name="statSelected" id="playercleansheets" value="Player Cleansheets">
+			<label class="form-check-label" for="playercleansheets">Player: Clean Sheets</label><br>
+			<input type="checkbox" name="statSelected" id="clubgoals" value="Club Goals">
+			<label class="form-check-label" for="clubgoals">Club: Goals</label><br>
+			<input type="checkbox" name="statSelected" id="clubpasses" value="Club Passes">
+			<label class="form-check-label" for="clubpasses">Club: Passes</label><br>
+			<input type="checkbox" name="statSelected" id="clubcleansheets" value="Club Cleansheets">
+			<label class="form-check-label" for="clubcleansheets">Club: Clean Sheets</label><br>
+			<input type="checkbox" name="statSelected" id="clubcrosses" value="Club Crosses">
+			<label class="form-check-label" for="clubcrosses">Club: Crosses</label><br>
+		</div>
+        <br>
+        <div class="form-group">
+			<h3>Comments (regarding the UI):</h3>
+			<textarea class="form-control" name="comment" rows="5" cols="30" placeholder="Type Here"></textarea><br>
+		</div>
+		<div class="form-group">
+			<h3>The UI for this website is well designed:</h3>
+			<input type="radio" name="rating" id="stronglyAgree" value="Strongly Agree" required>
+			<label class="form-check-label" for="stronglyAgree">Strongly Agree</label><br>
+			<input type="radio" name="rating" id="agree" value="Agree" required>
+			<label class="form-check-label" for="agree">Agree</label><br>
+			<input type="radio" name="rating" id="neutral" value="Neutral" required>
+			<label class="form-check-label" for="neutral">Neutral</label><br>
+			<input type="radio" name="rating" id="disagree" value="Disagree" required>
+			<label class="form-check-label" for="disagree">Disagree</label><br>
+			<input type="radio" name="rating" id="stronglyDisagree" value="Strongly Disagree" required>
+			<label class="form-check-label" for="stronglyDisagree">Strongly Disagree</label><br>
+		</div>
+        <br>
+        <button type="submit" id="bb" class="btn btn-lg btn-primary w-100">Submit</button>
+	</form>
+</div>
+<br>
+<footer class="footer-copyright text-center py-3" style="color: grey;">
+Site created by Bakhtyar Khan
+</footer>
+<script src="/assets/action.js"></script>
+</body>
+</html>
